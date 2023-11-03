@@ -1,17 +1,14 @@
-# Use a imagem base do Python
-FROM python:3.8
+# Use a imagem base do Windows com suporte ao Python
+FROM python:3.8-windowsservercore-ltsc2019
 
-# Define o diretório de trabalho
-WORKDIR /app
+# Defina o diretório de trabalho no contêiner
+WORKDIR C:\app
 
-# Copie os arquivos de código fonte para o contêiner
-COPY . /app
+# Copie os arquivos do seu aplicativo para o contêiner
+COPY . .
 
-# Instale as dependências do aplicativo
+# Instale as dependências do aplicativo (se houver)
 RUN pip install -r requirements.txt
 
-# Expõe a porta em que a aplicação estará em execução
-EXPOSE 5000
-
-# Comando para iniciar a aplicação
+# Comando a ser executado quando o contêiner for iniciado
 CMD ["python", "app.py"]
