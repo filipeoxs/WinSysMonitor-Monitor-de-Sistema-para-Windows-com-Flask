@@ -41,4 +41,5 @@ Sinta-se à vontade para contribuir com melhorias ou correções para este proje
 Este projeto está licenciado sob a MIT License - consulte o arquivo LICENSE para obter mais detalhes.
 
 ## Créditos
-Todos os créditos a Josue Soares Bruno
+Todos os créditos a Josué Soares Bruno
+- https://github.com/josuebruno
