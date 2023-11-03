@@ -1,0 +1,28 @@
+/* styles.css */
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para os contêineres de cartão */
+.card {
+    margin: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* Estilo para os cabeçalhos dos cartões */
+.card-header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Estilo para o conteúdo dos cartões */
+.card-body {
+    padding: 10px;
+}

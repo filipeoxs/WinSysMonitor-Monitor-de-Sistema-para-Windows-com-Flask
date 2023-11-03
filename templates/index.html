@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informações do Sistema Windows</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Informações do Sistema Windows</h1>
+
+        <div class="card">
+            <div class="card-header">
+                Uso de CPU
+            </div>
+            <div class="card-body">
+                <ul>
+                    {% for core, percent in cpu_percent_pairs %}
+                        <li>Núcleo {{ core }}: {{ percent }}%</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Informações de Memória
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Total de Memória: {{ memoria_info.total }} GB</li>
+                    <li>Memória Disponível: {{ memoria_info.disponivel }} GB</li>
+                    <li>Memória Usada: {{ memoria_info.usada }} GB</li>
+                    <li>Porcentagem de Uso de Memória: {{ memoria_info.porcentagem }}%</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Informações de Disco
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Total de Espaço em Disco: {{ disco_info.total }} GB</li>
+                    <li>Disco Disponível: {{ disco_info.disponivel }} GB</li>
+                    <li>Disco Usado: {{ disco_info.usado }} GB</li>
+                    <li>Porcentagem de Uso de Disco: {{ disco_info.porcentagem }}%</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

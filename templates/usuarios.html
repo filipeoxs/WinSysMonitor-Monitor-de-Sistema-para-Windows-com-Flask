@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informações de Usuários</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Informações de Usuários</h1>
+
+        <div class="card">
+            <div class="card-header">
+                Uso de CPU e Memória RAM por Usuário
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Usuário</th>
+                            <th>Uso de CPU (%)</th>
+                            <th>Uso de Memória (GB)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for usuario, info in info_usuarios.items() %}
+                            <tr>
+                                <td>{{ usuario }}</td>
+                                <td>{{ info['cpu_percent'] }}</td>
+                                <td>{{ info['memoria_gb'] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
