@@ -12,7 +12,7 @@ Antes de executar o aplicativo, certifique-se de ter as seguintes dependências 
 
 ## Você pode instalar as dependências usando o pip:
 
-pip install Flask psutil
+pip install -r requirements.txt
 
 
 ## Como executar o aplicativo
@@ -20,7 +20,7 @@ Clone este repositório para o seu computador.
 
 Navegue até o diretório raiz do projeto.
 
-## Execute o aplicativo Flask:
+## Execute o aplicativo Flask com privilégios de Administrador:
 
 python app.py
 
